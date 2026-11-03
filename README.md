@@ -7,60 +7,58 @@
 **Court booking software for pickleball facilities**<br />
 Your courts. Your business. One platform. — _by Sideline_
 
-[![Vue 3](https://img.shields.io/badge/Vue_3-35495E?logo=vuedotjs&logoColor=4FC08D)](https://vuejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev)
-[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Supabase](https://img.shields.io/badge/Supabase-Postgres_+_RLS-3FCF8E?logo=supabase&logoColor=white)](https://supabase.com)
-[![Cloudflare](https://img.shields.io/badge/Hosting-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://www.cloudflare.com)
-[![Tests](https://img.shields.io/badge/tests-Vitest_+_PGlite-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev)
-[![Status](https://img.shields.io/badge/status-pre--launch-11302a?labelColor=c9e86a)](#-project-status)
-
-[Features](#-what-it-does) · [Screenshots](#-screenshots) · [How it works](#-how-it-works) · [Getting started](#-getting-started) · [Database](#-database) · [Docs](#-docs)
+[What it does](#-what-it-does) · [Screenshots](#-screenshots) · [How it works](#-how-it-works) · [Plans](#-plans)
 
 <br />
 
-<img src="docs/images/marketing-home.jpg" alt="CourtDesk marketing site" width="100%" />
+<img src="docs/images/marketing-home.jpg" alt="CourtDesk" width="100%" />
 
 </div>
 
 <br />
 
-## ✨ What it does
+## 🏓 What is CourtDesk?
 
-CourtDesk gives every pickleball business its own **branded booking site** and a
-**court-owner dashboard**, while the Sideline team runs the whole platform from a
-**Super Admin console**. One app, one database, many businesses.
+CourtDesk is an online booking system made for pickleball courts in the
+Philippines. Each facility gets **its own booking website** where players can see
+open courts and book them any time, plus a **simple dashboard** to run the
+business day to day.
+
+No more back-and-forth messages, double bookings or paper schedules: players book
+and pay on their own, and the court owner sees everything in one place.
+
+## ✨ What it does
 
 <table>
   <tr>
     <td width="33%" valign="top">
-      <h3>🏓 For players</h3>
+      <h3>For players</h3>
       <ul>
-        <li>Book several courts, times and dates in one go</li>
-        <li>Pay by GCash, Maya or bank QR and upload proof</li>
-        <li>No app or account needed</li>
-        <li>Find a booking with its reference + phone</li>
+        <li>See open courts and prices in real time</li>
+        <li>Book several courts, times and dates at once</li>
+        <li>Pay with GCash, Maya or a bank QR code</li>
+        <li>No app to download, no account needed</li>
+        <li>Look up a booking any time</li>
       </ul>
     </td>
     <td width="33%" valign="top">
-      <h3>🏟️ For court owners</h3>
+      <h3>For court owners</h3>
       <ul>
-        <li>Calendar, bookings, walk-ins, check-ins</li>
-        <li>Day &amp; night rates per court</li>
-        <li>Approve payments, refunds, reschedules</li>
-        <li>Customers &amp; tags, reports, limits per player</li>
-        <li>Branding, policies, multiple locations</li>
+        <li>A branded booking site with your logo, colours and photos</li>
+        <li>A calendar of every court and every booking</li>
+        <li>Day and night rates for each court</li>
+        <li>Confirm payments, refunds and changes in a tap</li>
+        <li>Customer list, daily earnings and reports</li>
+        <li>Rules that stop no-shows and bulk bookings</li>
       </ul>
     </td>
     <td width="33%" valign="top">
-      <h3>🛠️ For Sideline</h3>
+      <h3>For growing clubs</h3>
       <ul>
-        <li>Trial requests → businesses in a click</li>
-        <li>Plans, limits and plan-change approvals</li>
-        <li>Automatic monthly invoices + overdue tracking</li>
-        <li>Invoice payments: manual proof or PayMongo</li>
-        <li>MRR, booking volume, who needs attention</li>
+        <li>One location or many</li>
+        <li>Your own house rules and policies on the site</li>
+        <li>Walk-in and phone bookings alongside online ones</li>
+        <li>Start with a free trial, upgrade any time</li>
       </ul>
     </td>
   </tr>
@@ -70,33 +68,25 @@ CourtDesk gives every pickleball business its own **branded booking site** and a
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/booking-choose-times.jpg" alt="Choosing times on several courts" /></td>
-    <td width="50%"><img src="docs/images/booking-site.jpg" alt="A business's booking site" /></td>
+    <td width="50%"><img src="docs/images/booking-site.jpg" alt="A facility's booking site" /></td>
+    <td width="50%"><img src="docs/images/booking-choose-times.jpg" alt="Choosing courts and times" /></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>Booking</b> · several courts in one booking, live availability</sub></td>
-    <td align="center"><sub><b>Booking site</b> · each business's own branded home page</sub></td>
+    <td align="center"><sub><b>Your booking site</b> · your locations, courts and prices</sub></td>
+    <td align="center"><sub><b>Booking a court</b> · pick courts and times, see the total</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="docs/images/owner-dashboard.jpg" alt="Court owner dashboard" /></td>
-    <td width="50%"><img src="docs/images/owner-calendar.jpg" alt="Court owner calendar" /></td>
+    <td width="50%"><img src="docs/images/owner-dashboard.jpg" alt="Owner dashboard" /></td>
+    <td width="50%"><img src="docs/images/owner-calendar.jpg" alt="Owner calendar" /></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>Owner dashboard</b> · money collected, today's schedule</sub></td>
+    <td align="center"><sub><b>Your dashboard</b> · money collected and today's games</sub></td>
     <td align="center"><sub><b>Calendar</b> · every court at a glance</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/images/super-admin.jpg" alt="Super Admin overview" /></td>
-    <td width="50%"><img src="docs/images/pricing.jpg" alt="Pricing" /></td>
-  </tr>
-  <tr>
-    <td align="center"><sub><b>Super Admin</b> · revenue and the health of every business</sub></td>
-    <td align="center"><sub><b>Pricing</b> · Starter, Growth, Pro and Custom</sub></td>
   </tr>
 </table>
 
 <details>
-<summary><b>📱 On a phone</b></summary>
+<summary><b>📱 See it on a phone</b></summary>
 <br />
 <p align="center"><img src="docs/images/booking-phone.jpg" alt="Booking on a phone" width="300" /></p>
 </details>
@@ -105,161 +95,51 @@ CourtDesk gives every pickleball business its own **branded booking site** and a
 
 ```mermaid
 flowchart LR
-    A([Prospect]) -->|Start free trial| B[Trial request]
-    B -->|Super Admin adds the business| C[Business on trial]
-    C -->|Owner sets up courts,<br/>rates, QR, policies| D[Booking site live]
-    D -->|Players book + upload proof| E[Owner approves payment]
-    C -->|Trial ends| F[Monthly invoice]
-    F -->|Proof or PayMongo| G([Active subscription])
+    A([Request a free trial]) --> B[We set up your account]
+    B --> C[Add your courts, prices<br/>and payment QR]
+    C --> D[Share your booking link]
+    D --> E[Players book and pay]
+    E --> F([You confirm and play])
 
     classDef brand fill:#11302a,stroke:#c9e86a,color:#ffffff
     classDef lime fill:#c9e86a,stroke:#11302a,color:#11302a
-    class A,G lime
-    class B,C,D,E,F brand
+    class A,F lime
+    class B,C,D,E brand
 ```
 
-| Area                     | URL                   | Who                                                                      |
-| ------------------------ | --------------------- | ------------------------------------------------------------------------ |
-| 🌐 Marketing site        | `/`, `/contact`       | Prospects: features, pricing, free-trial requests                        |
-| 🛠️ Super Admin console   | `/admin`              | Sideline: businesses, trial requests, subscriptions, invoices, plans     |
-| 🏟️ Court owner dashboard | `/manage/:tenantSlug` | The business: calendar, bookings, payments, customers, reports, settings |
-| 🏓 Public booking site   | `/book/:tenantSlug`   | Players: browse courts, book, pay, find a booking                        |
-
-### Architecture
-
-```mermaid
-flowchart LR
-    U[Browser<br/>Vue 3 app] -->|static site| CF[Cloudflare]
-    U -->|publishable key| SB[(Supabase)]
-    subgraph SB_[" "]
-      SB --- DB[Postgres<br/>+ row-level security]
-      SB --- AU[Auth]
-      SB --- ST[Storage<br/>QR codes, proofs, photos]
-      SB --- EF[Edge Functions]
-    end
-    EF <-->|checkout + webhook| PM[PayMongo]
-
-    classDef brand fill:#11302a,stroke:#c9e86a,color:#ffffff
-    class U,CF,SB,DB,AU,ST,EF,PM brand
-```
-
-Every rule that matters (who sees what, booking limits, prices, billing) lives
-in the database, so the browser only ever holds a public key.
+1. **Request a free trial** — tell us about your facility.
+2. **We set up your account** for you.
+3. **Add your courts** — opening hours, day and night rates, and your GCash, Maya or bank QR.
+4. **Share your booking link** — on Facebook, Messenger, or a QR code at the front desk.
+5. **Players book and pay** — they send payment straight to you and upload the receipt.
+6. **You confirm** — one tap, and the court is theirs.
 
 ## 💳 Plans
 
 |                    | **Starter** | **Growth** ⭐ |   **Pro**   |   **Custom**    |
 | ------------------ | :---------: | :-----------: | :---------: | :-------------: |
-| Monthly            |    ₱999     |    ₱1,799     |   ₱3,999    |    By quote     |
-| Locations / courts |    1 / 4    |    3 / 12     |   6 / 30    | Your own system |
-| Bookings per month |     400     |     2,000     |  Unlimited  |        —        |
+| Per month          |    ₱999     |    ₱1,799     |   ₱3,999    |    By quote     |
+| Locations          |      1      |       3       |      6      | Your own system |
+| Courts             |      4      |      12       |     30      |                 |
+| Bookings per month |     400     |     2,000     |  Unlimited  |                 |
 | Free trial         |     ✅      |      ✅       | Coming soon |   Talk to us    |
 
-Every plan includes the booking site, calendar, day & night rates, GCash / cash
-payments, customer list and custom branding. Yearly billing = two months free.
+Every plan includes your own booking site, the court calendar, day and night
+rates, GCash and cash payments, a customer list and your own branding.
+Pay yearly and get two months free.
 
-## 🚀 Getting started
-
-> [!NOTE]
-> Requires Node (version in [.nvmrc](.nvmrc)). No Supabase project is needed to try it.
-
-```bash
-npm install
-npm run dev          # → http://localhost:5173
-```
-
-**Two ways to run it**
-
-- **Demo data (zero setup)** — with no Supabase keys the app runs on seeded,
-  in-memory data and `/login` offers one-click demo accounts. Changes last until
-  the page is reloaded.
-- **Supabase** — copy [.env.example](.env.example) to `.env.local` and fill in
-  `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (both browser-safe).
-  Set `VITE_DATA_SOURCE=mock` to force demo data anyway.
-
-> [!IMPORTANT]
-> `.env.local` and every other `.env*` file (except `.env.example`) are git-ignored.
-> Secret keys (Supabase service role, PayMongo) never go in files — they are
-> Supabase Edge Function secrets.
-
-<details>
-<summary><b>📜 Scripts</b></summary>
-<br />
-
-| Script                            | What it does                                             |
-| --------------------------------- | -------------------------------------------------------- |
-| `npm run dev`                     | Dev server                                               |
-| `npm run build`                   | Type-check + production build to `dist/`                 |
-| `npm run typecheck`               | `vue-tsc` on app, config and tests                       |
-| `npm run lint` / `npm run format` | ESLint / Prettier                                        |
-| `npm test`                        | Vitest: unit tests + database tests                      |
-| `npm run db:bundle`               | Rebuilds `supabase/apply/schema.sql` from all migrations |
-
-</details>
-
-<details>
-<summary><b>🏢 Demo businesses (demo data)</b></summary>
-<br />
-
-| Business                               | Plan           | Shows                                          |
-| -------------------------------------- | -------------- | ---------------------------------------------- |
-| Rally Point Pickleball (`rally-point`) | Growth         | 3 locations, 2 accounts, per-court daily limit |
-| Dink & Drive Courts (`dink-and-drive`) | Growth, yearly | 2 locations, card payments                     |
-| Kitchen Line Club (`kitchen-line`)     | Starter        | At its court limit, so the upgrade flow shows  |
-| Baseline Sports Hub (`baseline-hub`)   | Pro, trial     | Trial banner and countdown                     |
-| Paddle Republic (`paddle-republic`)    | Pro, yearly    | 4 locations, largest volume                    |
-| Third Shot Arena (`third-shot`)        | Starter        | Past due, with an overdue invoice              |
-| Coastline Pickle Co. (`coastline`)     | Starter        | Suspended: its booking site is offline         |
-
-</details>
-
-## 🗄️ Database
-
-| What                | Where                                                  | Notes                                                               |
-| ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
-| **Migrations**      | [supabase/migrations/](supabase/migrations)            | Applied in file order (pasted into the Supabase SQL Editor)         |
-| **Whole schema**    | [supabase/apply/schema.sql](supabase/apply/schema.sql) | Generated by `npm run db:bundle`; a test fails if it's stale        |
-| **Seeds & scripts** | [supabase/seed/](supabase/seed)                        | Demo data, `reset_businesses.sql`, `simulate_expired_trial.sql`     |
-| **Edge Functions**  | [supabase/functions/](supabase/functions)              | `invoice-checkout` + `paymongo-webhook` ([setup](docs/paymongo.md)) |
-
-🧪 **Database tests** run every migration in an in-memory Postgres
-([PGlite](https://pglite.dev)) and check row-level security, the booking
-engine, player limits and billing — `npm test` needs no Supabase project.
-
-## 🧱 Tech stack
-
-| Layer    | Tools                                                                                   |
-| -------- | --------------------------------------------------------------------------------------- |
-| App      | Vue 3 (`<script setup lang="ts">`), Vite, strict TypeScript, Vue Router, Pinia          |
-| UI       | Tailwind CSS v4, `@lucide/vue` icons, Inter + Oswald (self-hosted), Leaflet             |
-| Charts   | Small hand-written SVG components                                                       |
-| Backend  | Supabase: Postgres + RLS, Auth, Storage, Edge Functions                                 |
-| Payments | Manual QR + proof; PayMongo Checkout for invoices                                       |
-| Quality  | ESLint, Prettier, Vitest, PGlite                                                        |
-| Hosting  | Cloudflare static assets ([wrangler.jsonc](wrangler.jsonc), [headers](public/_headers)) |
-
-## 📍 Project status
-
-- [x] Booking site, owner dashboard and Super Admin console
-- [x] Multi-court, multi-date bookings with per-player limits
-- [x] Plans, trials, automatic billing, invoices (manual + PayMongo test mode)
-- [x] Row-level security and database tests
-- [ ] End-to-end review with one real business
-- [ ] Go live: domain, Cloudflare hosting, email (SMTP), live PayMongo
-- [ ] Custom domains for businesses
-
-## 📚 Docs
-
-| Doc                                       | About                                           |
-| ----------------------------------------- | ----------------------------------------------- |
-| [architecture.md](docs/architecture.md)   | Folders, data flow, multi-tenancy               |
-| [database.md](docs/database.md)           | Supabase project, schema, row-level security    |
-| [security.md](docs/security.md)           | What protects CourtDesk + the go-live checklist |
-| [paymongo.md](docs/paymongo.md)           | Online invoice payments (test and live setup)   |
-| [design-system.md](docs/design-system.md) | Tokens, business theming, components, charts    |
+**Custom** is for facilities that want booking software built just for them,
+with their own website address.
 
 <br />
 
 <div align="center">
-<sub><b>CourtDesk</b> is built by <b>Sideline</b> · Made in the Philippines 🇵🇭</sub>
+
+**Ready to get your courts online?**<br />
+Start your free trial — no payment needed.
+
+<br />
+
+<sub><b>CourtDesk</b> is made by <b>Sideline</b> · Made in the Philippines 🇵🇭</sub>
+
 </div>
