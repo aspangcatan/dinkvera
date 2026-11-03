@@ -1,0 +1,59 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets: environment files and keys are never committed.
+# .env.example (names only, no values) is the one that is.
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+*.p12
+*.pfx
+service-account*.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Test artifacts
+coverage
+playwright-report
+test-results
+blob-report
+*.lcov
+
+# Supabase local dev
+supabase/.temp
+supabase/.branches
+.supabase
+
+# Third-party reference/inspiration screenshots (never ours to redistribute
+# or version — see docs/architecture.md's "premium-club redesign" section).
+src/assets/images/kov-*.png
+
+# Cloudflare Wrangler local state
+.wrangler

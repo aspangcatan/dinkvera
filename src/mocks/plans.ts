@@ -1,0 +1,53 @@
+import type { Plan } from '@/types/billing'
+
+export const planSeed: Plan[] = [
+  {
+    id: 'starter',
+    name: 'Starter',
+    description: 'For a single venue getting online bookings off the ground.',
+    monthlyPrice: 99_900,
+    annualPrice: 999_000,
+    limits: { locations: 1, courts: 4, bookingsPerMonth: 400 },
+    features: [
+      'Online booking page',
+      'Court calendar',
+      'Day & night rates',
+      'GCash & cash payments',
+      'Customer list',
+      'Custom branding',
+    ],
+    highlighted: false,
+    isPublic: true,
+    comingSoon: false,
+  },
+  {
+    id: 'growth',
+    name: 'Growth',
+    description: 'For growing clubs adding courts and a second site.',
+    monthlyPrice: 179_900,
+    annualPrice: 1_799_000,
+    limits: { locations: 3, courts: 12, bookingsPerMonth: 2_000 },
+    features: ['Everything in Starter', 'Up to 3 locations', 'Revenue reports'],
+    highlighted: true,
+    isPublic: true,
+    comingSoon: false,
+  },
+  {
+    id: 'pro',
+    name: 'Pro',
+    description: 'For multi-site operators who need deeper control.',
+    monthlyPrice: 399_900,
+    annualPrice: 3_999_000,
+    limits: { locations: 6, courts: 30, bookingsPerMonth: null },
+    features: [
+      'Everything in Growth',
+      'Unlimited bookings',
+      'Card payments',
+      'Advanced analytics',
+      'Priority support',
+    ],
+    highlighted: false,
+    isPublic: true,
+    comingSoon: true,
+  },
+]

@@ -1,0 +1,13 @@
+# Security headers for Cloudflare Pages (and Netlify), applied to every page.
+# - No framing by other sites (clickjacking).
+# - Browsers must not guess file types, and always use HTTPS from now on.
+# - Other sites see only our domain in the Referer, not full paths.
+# - Location is allowed for "Use my location" in Edit location; camera,
+#   microphone and payment APIs aren't used.
+/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), camera=(), microphone=(), payment=()

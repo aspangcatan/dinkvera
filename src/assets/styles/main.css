@@ -1,0 +1,143 @@
+@import 'tailwindcss';
+
+/*
+ * Sideline design tokens. See docs/design-system.md.
+ *
+ * The platform palette (forest / lime / charcoal) carries over from
+ * match-pickleball. Tenant brand colors are runtime CSS variables
+ * (`--tenant-primary`, `--tenant-accent`) set by useBrandTheme(), so every
+ * business gets its own look from the same utility classes:
+ * `bg-brand-600`, `text-brand-700`, `ring-brand-200`…
+ */
+@theme {
+  --color-forest-50: #eef4f1;
+  --color-forest-100: #d7e6df;
+  --color-forest-200: #afccbf;
+  --color-forest-300: #7fae99;
+  --color-forest-400: #4c8d74;
+  --color-forest-500: #2f6e54;
+  --color-forest-600: #1f5641;
+  --color-forest-700: #173f35;
+  --color-forest-800: #11302a;
+  --color-forest-900: #0b211d;
+
+  --color-lime-50: #f7fce9;
+  --color-lime-100: #ecf7c9;
+  --color-lime-200: #ddf0a0;
+  --color-lime-300: #c9e86a;
+  --color-lime-400: #b4d84a;
+  --color-lime-500: #9cc032;
+  --color-lime-600: #7c9a26;
+
+  --color-charcoal-50: #f4f4f3;
+  --color-charcoal-100: #e2e3e0;
+  --color-charcoal-200: #b9bbb5;
+  --color-charcoal-300: #8d8f88;
+  --color-charcoal-400: #5c5f58;
+  --color-charcoal-500: #3a3e38;
+  --color-charcoal-600: #222824;
+  --color-charcoal-700: #1a1f1b;
+
+  /* Marketing site (the landing page): fresh pickleball palette. */
+  --color-court: #123e35;
+  --color-court-2: #1f6b50;
+  --color-ball: #c7f36b;
+  --color-mist: #f5f7f2;
+  --color-ink: #25332e;
+
+  --color-warm-white: #f7f6f0;
+  /* Dashboard page background: a touch cooler than warm-white. */
+  --color-canvas: #f4f5f2;
+
+  /* Chart series (categorical, fixed order — see docs/design-system.md). */
+  --color-series-1: #2a78d6;
+  --color-series-2: #eb6834;
+  --color-series-3: #1baf7a;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Oswald Variable', 'Arial Narrow', system-ui, sans-serif;
+}
+
+/* Tenant brand scale, mixed from the one primary color at runtime. */
+@theme inline {
+  --color-brand-50: color-mix(in oklab, var(--tenant-primary) 7%, white);
+  --color-brand-100: color-mix(in oklab, var(--tenant-primary) 14%, white);
+  --color-brand-200: color-mix(in oklab, var(--tenant-primary) 28%, white);
+  --color-brand-300: color-mix(in oklab, var(--tenant-primary) 50%, white);
+  --color-brand-500: color-mix(in oklab, var(--tenant-primary) 85%, white);
+  --color-brand-600: var(--tenant-primary);
+  --color-brand-700: color-mix(in oklab, var(--tenant-primary) 82%, black);
+  --color-brand-800: color-mix(in oklab, var(--tenant-primary) 62%, black);
+  --color-brand-900: color-mix(in oklab, var(--tenant-primary) 42%, black);
+  --color-brand-accent: var(--tenant-accent);
+}
+
+:root {
+  /* Platform defaults until a tenant's branding is applied. */
+  --tenant-primary: #1f5641;
+  --tenant-accent: #c9e86a;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-canvas text-charcoal-700 font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  :focus-visible {
+    @apply outline-forest-600 outline-2 outline-offset-2;
+  }
+
+  /* Tailwind v4 dropped the pointer cursor on buttons; bring it back. */
+  button,
+  [role='button'],
+  [role='tab'],
+  select,
+  summary,
+  input[type='checkbox'],
+  input[type='radio'],
+  label:has(input[type='checkbox'], input[type='radio']) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled,
+  label:has(input:disabled) {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  /* Scroll-in reveal for marketing sections (see useReveal). */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    [data-reveal].is-revealed {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Numbers that line up in tables and stat tiles. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
